@@ -1,0 +1,11 @@
+---
+description: Error handling and user-facing errors for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Error Handling and User-Facing Errors
+
+- Use typed errors (enums conforming to `Error`) for domain failures; avoid bare `NSError` or stringly-typed errors at boundaries.
+- Map low-level or network errors to domain errors inside the layer that owns the call; present a simple, user-friendly message (or key) in the UI.
+- Document thrown errors in doc comments (`throws`, or list in `- Note:`); avoid swallowing errors without logging or rethrowing.

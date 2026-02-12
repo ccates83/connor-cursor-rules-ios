@@ -1,0 +1,13 @@
+---
+description: SwiftUI view composition and layout for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# SwiftUI View Composition
+
+- Keep `body` small; extract subviews (as private `var` or nested `struct`) when a view grows.
+- Put view logic in the view model; views should bind and layout, not decide business rules.
+- Add `#Preview` where helpful for isolated iteration; prefer real dependencies or minimal fakes.
+- Use `@ViewBuilder` only when needed (multiple conditional branches returning different view types).
+- Prefer semantic modifiers and avoid unnecessary `Group` wrappers.

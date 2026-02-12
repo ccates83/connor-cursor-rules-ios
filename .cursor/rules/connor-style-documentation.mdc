@@ -1,0 +1,25 @@
+---
+description: Swift/SwiftUI documentation style for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Documentation
+
+**Public API**
+
+- Add `///` doc comments for all public types, properties, and methods.
+- For non-trivial behavior use multiple lines; explain side effects or when something runs (e.g. "automatically when the property is set via its `didSet`").
+
+**Parameters / Returns / Note**
+
+- Use `- Parameter name:`, `- Returns:`, `- Note: ...` where they clarify contract or usage.
+
+**Inline comments**
+
+- Use for non-obvious logic; explain *why* or workarounds.
+- If code is temporary or a workaround, say so.
+
+**TODOs**
+
+- Use ticket/ID + condition so work is traceable: `// TODO: (TICKET-123) Remove once feature X is shipped.`

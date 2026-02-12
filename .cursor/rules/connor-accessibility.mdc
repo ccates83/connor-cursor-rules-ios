@@ -1,0 +1,12 @@
+---
+description: Accessibility (VoiceOver, Dynamic Type, UI tests) for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Accessibility
+
+- Add `accessibilityLabel` (and `accessibilityHint` when helpful) for interactive elements and meaningful images; avoid redundant labels.
+- Support Dynamic Type: use semantic text styles or scale with the environment; avoid fixed font sizes for body text.
+- Respect `accessibilityReduceMotion` and avoid non-essential animation when it is enabled.
+- Use `accessibilityIdentifier` for UI tests; keep identifiers stable and consistent with the project's naming.

@@ -1,0 +1,11 @@
+---
+description: Localization and user-facing strings for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Localization
+
+- Do not hardcode user-facing strings in Swift; use the project's localization mechanism (e.g. `String(localized:)`, `NSLocalizedString`, or a generated `L10n`/enum API).
+- Keep keys or enum cases consistent with the project's existing naming.
+- Use placeholder comments or parameterized strings for dynamic text; avoid string concatenation for sentences.

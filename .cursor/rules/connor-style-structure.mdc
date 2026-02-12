@@ -1,0 +1,25 @@
+---
+description: Swift/SwiftUI file structure and organization for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Structure and Organization
+
+**Extensions**
+
+- Group behavior by capability in separate files: `Type+Capability.swift` (e.g. `ViewModel+ScrollState`, `Feature+Filter`).
+- One main concern per extension file.
+
+**MARK**
+
+- Use a hyphen for section headers: `// MARK: - Security`, `// MARK: Private Methods`.
+- Group private implementation in a `private extension` on the same type.
+
+**Nested types**
+
+- When a type is only used in one context, define it inside that type's extension (e.g. an enum and a small model class nested in the view model's extension).
+
+**Naming**
+
+- Match the project's existing file and type naming (prefixes, module boundaries, etc.).

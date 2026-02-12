@@ -1,0 +1,29 @@
+---
+description: Swift/SwiftUI code and dependency patterns for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Swift and Dependency Patterns
+
+**Control flow**
+
+- Prefer `guard` for early returns and optional binding; avoid deep nesting.
+
+**DI**
+
+- Use the project's dependency-injection pattern (e.g. `@Dependency(\.key)` where Dependencies is used).
+- In `@Observable` types, mark injected dependencies with `@ObservationIgnored` so they don't participate in observation.
+
+**View models**
+
+- Use `@Observable @MainActor` for SwiftUI view models.
+- Use `switch` for mapping and computed state; omit explicit `return` when a single expression is clear.
+
+**State propagation**
+
+- Use `didSet` when one property should drive updates (e.g. a filter property calling an `updateFilter(_:)` method).
+
+**Architecture**
+
+- When editing code in a layer with existing architecture rules or ADRs (e.g. data layer, networking), follow those project rules.

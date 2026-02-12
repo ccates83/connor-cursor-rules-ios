@@ -1,0 +1,11 @@
+---
+description: Privacy and security (secrets, keychain, PII) for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Privacy and Security
+
+- Do not commit secrets, API keys, or tokens; use the project's config (e.g. xcconfig, env, keychain) and never log them.
+- Store credentials and sensitive data in the keychain (or project-approved secure storage); do not use `UserDefaults` or plists for secrets.
+- Do not log PII (e.g. emails, IDs, tokens); redact or omit in log messages and analytics.

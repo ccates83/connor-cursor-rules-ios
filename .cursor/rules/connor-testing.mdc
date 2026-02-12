@@ -1,0 +1,12 @@
+---
+description: Swift test naming and structure for iOS projects
+globs: "**/*Tests*.swift"
+alwaysApply: false
+---
+
+# Testing
+
+- Name tests so the scenario and expected outcome are clear (e.g. `test_whenUserTapsSubmit_validatesInputBeforeSending` or `testSubmitButtonValidatesInputBeforeSending`—match existing style).
+- One logical behavior per test; avoid testing multiple unrelated things.
+- Use the project's mocking/faking approach (e.g. protocol-based fakes, not necessarily a specific framework).
+- Prefer testing behavior and outcomes over implementation details; avoid brittle assertions on private state.

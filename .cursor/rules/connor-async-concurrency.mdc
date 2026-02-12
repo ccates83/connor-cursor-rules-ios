@@ -1,0 +1,12 @@
+---
+description: Async/await and concurrency patterns for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Async and Concurrency
+
+- Prefer `async/await` over completion handlers; use `Task { }` at the boundary when crossing from sync to async.
+- Annotate UI and view-model types with `@MainActor` where they touch UI or main-thread state.
+- Avoid capturing mutable state in escaping closures; prefer `[weak self]` and explicit capture lists when needed.
+- Mark types that cross actor boundaries as `Sendable` only when they are safe to share; otherwise keep them on a single actor or pass copies.

@@ -1,0 +1,11 @@
+---
+description: Logging and diagnostics for iOS projects
+globs: "**/*.swift"
+alwaysApply: false
+---
+
+# Logging and Diagnostics
+
+- Use the project's logging API (e.g. OSLog, custom logger) instead of `print` for diagnostics.
+- Log at an appropriate level (e.g. debug for development, error for failures); avoid logging PII or secrets.
+- Prefer structured or clearly formatted messages so logs are searchable and actionable.
