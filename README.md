@@ -8,7 +8,7 @@ Shared [Cursor](https://cursor.com) project rules for iOS/Swift/SwiftUI. Use the
 
 1. Open **Cursor Settings → Rules, Commands**
 2. Click **+ Add Rule** next to Project Rules, then **Remote Rule (Github)**
-3. Paste this repo’s URL: `https://github.com/connorcates/connor-cursor-rules-ios`
+3. Paste this repo’s URL: `https://github.com/connorcates/connor-cursor-rules-ios.git`
 
 Cursor will pull and sync the rules; updates to the repo are reflected in your project.
 
